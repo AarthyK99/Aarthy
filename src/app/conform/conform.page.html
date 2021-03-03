@@ -1,0 +1,46 @@
+
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Verify Account</ion-title>
+    <ion-button slot="end" fill="clear" (click)="close()">close</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="pt-3">
+    <ion-grid>
+      <ion-row>
+        <ion-col size-lg="6" size-xl="6" offset-xl="3" size-md="12" size-sm="12" size-xs="12" class="pt-2">
+          <div >
+            <ion-label>Enter OTP</ion-label>
+            <!-- <ion-input maxlength="6" class="number"></ion-input> -->
+            <div class="d-flex flex-row pt-4">
+              <input maxlength="1" (keypress)="numberOnlyValidation($event)" class="form-control me-1">
+              <input maxlength="1" (keypress)="numberOnlyValidation($event)" class="form-control me-1">
+              <input maxlength="1" (keypress)="numberOnlyValidation($event)" class="form-control me-1">
+              <input maxlength="1" (keypress)="numberOnlyValidation($event)" class="form-control me-1">
+              <input maxlength="1" (keypress)="numberOnlyValidation($event)" class="form-control me-1">
+              <input maxlength="1" (keypress)="numberOnlyValidation($event)" class="form-control me-1">
+            </div>
+          </div>
+        </ion-col>
+      <br>
+        <ion-col  size-lg="12" size-md="12" size-sm="12" size-xs="12" class="pt-2 ">
+          <div class="text-center">
+            <p>If you don't receive a code,resend it.</p>
+            <ion-button size="small" >Resend OTP</ion-button>
+          </div>
+        </ion-col>
+
+        <ion-col  size-lg="12" size-md="12" size-sm="12" size-xs="12" class="pt-2 " class="pt-2" >
+          <div class="text-center">
+            <ion-button size="small">Verify OTP</ion-button>
+          </div>
+        </ion-col>
+
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
